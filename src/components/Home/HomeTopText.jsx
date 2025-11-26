@@ -2,10 +2,10 @@ import React from 'react'
 
 const HomeTopText = () => {
     return (
-        <div className='font-[font1]'>
-            <div className='text-[12vw] uppercase' > L'étincelle </div>
-            <div className='text-[12vw] uppercase'> quigénère </div>
-            <div className='text-[12vw] uppercase'> la créativité </div>
+        <div className='font-[font1] text-white'>
+            <div className='text-[12vw] uppercase leading-[10vw]' > L'étincelle </div>
+            <div className='text-[12vw] uppercase leading-[10vw]'> quigénère </div>
+            <div className='text-[12vw] uppercase leading-[10vw]'> la créativité </div>
 
         </div>
     )
