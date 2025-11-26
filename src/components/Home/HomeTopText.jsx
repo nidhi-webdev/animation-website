@@ -1,11 +1,14 @@
 import React from 'react'
 
 const HomeTopText = () => {
-  return (
-    <div>
-      Home Top Text
-    </div>
-  )
+    return (
+        <div>
+            <div> L'étincelle </div>
+            <div> quigénère </div>
+            <div> la créativité </div>
+
+        </div>
+    )
 }
 
 export default HomeTopText
