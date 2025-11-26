@@ -1,11 +1,21 @@
-import React from 'react'
+import HomeBottomText from "../components/Home/HomeBottomText"
+import HomeTopText from "../components/Home/HomeTopText"
+import Video from "../components/Home/Video"
+
 
 const Home = () => {
-  return (
-    <div>
-      Home
-    </div>
-  )
+    return (
+        <div>
+            <div className="fixed h-screen w-screen ">
+                <Video />
+            </div>
+            <div className="h-screen w-screen relative">
+                <HomeTopText />
+                <HomeBottomText />
+            </div>
+           
+        </div>
+    )
 }
 
 export default Home
