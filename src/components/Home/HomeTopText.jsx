@@ -3,9 +3,9 @@ import React from 'react'
 const HomeTopText = () => {
     return (
         <div className='font-[font1]'>
-            <div > L'étincelle </div>
-            <div> quigénère </div>
-            <div> la créativité </div>
+            <div className='text-[12vw] uppercase' > L'étincelle </div>
+            <div className='text-[12vw] uppercase'> quigénère </div>
+            <div className='text-[12vw] uppercase'> la créativité </div>
 
         </div>
     )
