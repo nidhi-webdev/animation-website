@@ -3,13 +3,13 @@ import Video from './Video'
 
 const HomeTopText = () => {
     return (
-        <div className='font-[font1] text-white pt-10 text-center'>
-            <div className='text-[9.5vw] uppercase leading-[9.5vw]' > L'étincelle </div>
+        <div className='font-[font2] text-white pt-5 text-center '>
+            <div className='text-[9.5vw] uppercase leading-[9.5vw] flex items-center justify-center' > L'étincelle </div>
             <div className='text-[9.5vw] uppercase leading-[9.5vw] flex items-center justify-center'>
                  qui
-                <div className='h-[10vw] w-[10vw]'> <Video /> </div>
+                <div className='h-[10vw]'> <Video /> </div>
                 génère </div>
-            <div className='text-[9.5vw] uppercase leading-[9.5vw]'> la créativité </div>
+            <div className='text-[9.5vw] uppercase leading-[9.5vw] flex items-center justify-center'> la créativité </div>
 
         </div>
     )
