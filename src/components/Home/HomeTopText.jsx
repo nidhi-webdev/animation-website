@@ -7,7 +7,7 @@ const HomeTopText = () => {
             <div className='text-[9.5vw] uppercase leading-[8vw] flex items-center justify-center' > L'étincelle </div>
             <div className='text-[9.5vw] uppercase leading-[8vw] flex items-center justify-center'>
                  qui
-                <div className='rounded-[4vw] w-[16vw] h-[7vw] overflow-hidden mx-4 flex items-center justify-center'> 
+                <div className='rounded-full w-[16vw] h-[7vw] overflow-hidden mx-4 flex items-center justify-center -mt-5'> 
                     <Video /> 
                     </div>
                 génère </div>
