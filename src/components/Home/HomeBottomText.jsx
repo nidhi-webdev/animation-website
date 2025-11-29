@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HomeBottomText = () => {
   return (
-    <div>
-      Home Bottom Text
+    <div className='font-[font1] text-white'>
+      <Link> Projects  </Link>
+      <Link> Agence  </Link>
     </div>
   )
 }
