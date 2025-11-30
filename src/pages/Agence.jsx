@@ -3,7 +3,10 @@ import React from 'react'
 const Agence = () => {
   return (
     <div>
-      Agence
+      <div>
+        <h1 className='text-white text-[15vw]'>Soixan7e <br />
+          Douze</h1>
+      </div>
     </div>
   )
 }
