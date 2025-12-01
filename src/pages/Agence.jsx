@@ -3,7 +3,7 @@ import React from 'react'
 const Agence = () => {
   return (
    <div>
-    <div className='h-80 w-60 absolute top-60 left-100'>
+    <div className='h-[20vw] w-[15vw] absolute top-60 left-100'>
       <img src='https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg' />
     </div>
      <div className='font-[font1]'>
