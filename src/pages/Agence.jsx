@@ -2,7 +2,11 @@ import React from 'react'
 
 const Agence = () => {
   return (
-    <div className='font-[font1]'>
+   <div>
+    <div className='h-80 w-60 absolute top-60 left-100'>
+      <img src='https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg' />
+    </div>
+     <div className='font-[font1]'>
       <div className='mt-[55vh]'>
         <h1 className='text-white text-[20vw] uppercase text-center leading-[18vw]'>Soixan7e <br />
           Douze</h1>
@@ -17,6 +21,7 @@ const Agence = () => {
         </p>
       </div>
     </div>
+   </div>
   )
 }
 
