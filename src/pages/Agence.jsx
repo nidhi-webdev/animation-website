@@ -7,9 +7,9 @@ const Agence = () => {
         <h1 className='text-white text-[20vw] uppercase text-center leading-[18vw]'>Soixan7e <br />
           Douze</h1>
       </div>
-      <div className='pl-[50%] bg-red-500'>
+      <div className='pl-[40%] mt-20'>
         <p className='text-5xl text-white'>
-          Notre curiosité nourrit notre créativité.
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notre curiosité nourrit notre créativité.
           On reste humbles et on dit non aux gros egos, même le vôtre. Une marque est vivante.
           Elle a des valeurs, une personnalité, une histoire. Si on oublie ça, on peut faire de
           bons chiffres à court terme, mais on la tue à long terme. C’est pour ça qu’on s’engage
