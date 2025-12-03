@@ -13,7 +13,7 @@ const Agence = () => {
       scrollTrigger: {
         trigger: imageDivRef.current,
         markers: true,
-        start: 'top 31%',
+        start: 'top 26%',
         end: 'top -70%',
         scrub: true,
         pin: true
@@ -25,7 +25,7 @@ const Agence = () => {
   return (
     <div>
       <div className='section1'>
-        <div ref={imageDivRef} className='h-[20vw] w-[15vw] absolute top-60 left-[30vw] rounded-4xl overflow-hidden'>
+        <div ref={imageDivRef} className='h-[20vw] w-[15vw] absolute top-50 left-[30vw] rounded-4xl overflow-hidden'>
           <img className='h-full w-full object-cover' src='https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg' />
         </div>
         <div className='font-[font1] relative'>
