@@ -1,8 +1,17 @@
+import { useGSAP } from "@gsap/react"
 import { useRef } from "react"
+import gsap from "gsap"
 
 
 const Agence = () => {
-const imageDivRef = useRef(null)
+  const imageDivRef = useRef(null)
+
+  useGSAP(function () {
+    gsap.to(imageDivRef.current, {
+      x: 500,
+      repeat: 5
+    })
+  })
 
 
   return (
