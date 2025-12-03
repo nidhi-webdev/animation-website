@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/all'
 
 const Agence = () => {
   const imageDivRef = useRef(null)
+  const imageRef = useRef(null)
+
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
@@ -26,7 +28,7 @@ const Agence = () => {
     <div>
       <div className='section1'>
         <div ref={imageDivRef} className='h-[20vw] w-[15vw] absolute top-50 left-[30vw] rounded-4xl overflow-hidden'>
-          <img className='h-full w-full object-cover' src='https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg' />
+          <img ref={imageRef} className='h-full w-full object-cover' src='https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg' />
         </div>
         <div className='font-[font1] relative'>
           <div className='mt-[55vh]'>
