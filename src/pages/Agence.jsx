@@ -1,15 +1,19 @@
 import { useGSAP } from "@gsap/react"
 import { useRef } from "react"
 import gsap from "gsap"
+import { ScrollTrigger } from 'gsap/all'
 
 
 const Agence = () => {
   const imageDivRef = useRef(null)
+  gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
     gsap.to(imageDivRef.current, {
-      x: 500,
-      repeat: 5
+      scrollTrigger: {
+        trigger: imageDivRef.current,
+        markers: true
+      }
     })
   })
 
