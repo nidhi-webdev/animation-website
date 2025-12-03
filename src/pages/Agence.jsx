@@ -1,10 +1,14 @@
-import React from 'react'
+import { useRef } from "react"
+
 
 const Agence = () => {
+const imageDivRef = useRef(null)
+
+
   return (
     <div>
       <div className='section1'>
-        <div className='h-[20vw] w-[15vw] absolute top-60 left-[30vw] rounded-4xl overflow-hidden'>
+        <div ref={imageDivRef} className='h-[20vw] w-[15vw] absolute top-60 left-[30vw] rounded-4xl overflow-hidden'>
           <img className='h-full w-full object-cover' src='https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg' />
         </div>
         <div className='font-[font1] relative'>
