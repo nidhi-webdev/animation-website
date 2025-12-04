@@ -3,12 +3,11 @@ import { useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from 'gsap/all'
 
+gsap.registerPlugin(ScrollTrigger)
 
 const Agence = () => {
   const imageDivRef = useRef(null)
   const imageRef = useRef(null)
-
-  gsap.registerPlugin(ScrollTrigger)
 
   const imageArray = [
     'https://k72.ca/images/teamMembers/Olivier_480x640.jpg?w=480&h=640&fit=crop&s=c13569c0753117d04f1a93cf7b446d64',
@@ -25,33 +24,37 @@ const Agence = () => {
 
 
   useGSAP(function () {
-    gsap.to(imageDivRef.current, {
-      scrollTrigger: {
-        trigger: imageDivRef.current,
-        markers: true,
-        start: 'top 26%',
-        end: 'top -70%',
-        scrub: true,
-        pin: true,
-        onUpdate: (elem) => {
-          let imageIndex;
-          if (elem.progress < 1) {
-            imageIndex = Math.floor(elem.progress * imageArray.length)
-          } else {
-            imageIndex = imageArray.length - 1
+    if (imageDivRef.current && imageRef.current) {
+      gsap.to(imageDivRef.current, {
+        scrollTrigger: {
+          trigger: imageDivRef.current,
+          markers: true,
+          start: 'top 31%',
+          end: 'top -300%',
+          scrub: 1,
+          pin: true,
+          onUpdate: (elem) => {
+            let imageIndex;
+            if (elem.progress < 1) {
+              imageIndex = Math.floor(elem.progress * imageArray.length)
+            } else {
+              imageIndex = imageArray.length - 1
+            }
+            if (imageRef.current) {
+              imageRef.current.src = imageArray[imageIndex]
+            }
           }
-          imageRef.current.src = imageArray[imageIndex]
         }
-      }
-    })
+      })
+    }
   })
 
 
   return (
     <div>
-      <div className='section1'>
-        <div ref={imageDivRef} className='h-[20vw] w-[15vw] absolute top-50 left-[30vw] rounded-4xl overflow-hidden'>
-          <img ref={imageRef} className='h-full w-full object-cover' src='https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg' />
+      <div className='section1 min-h-[200vh]'>
+        <div ref={imageDivRef} className='h-[20vw] w-[15vw] absolute top-60 left-[30vw] rounded-4xl overflow-hidden'>
+          <img ref={imageRef} className='h-full w-full object-cover' src={imageArray[0]} alt="Team member" />
         </div>
         <div className='font-[font1] relative'>
           <div className='mt-[55vh]'>
