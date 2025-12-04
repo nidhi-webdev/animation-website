@@ -10,6 +10,11 @@ const Agence = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
+  const imageArray = [
+    'https://k72.ca/images/teamMembers/Olivier_480x640.jpg?w=480&h=640&fit=crop&s=c13569c0753117d04f1a93cf7b446d64',
+    'https://k72.ca/images/teamMembers/Lawrence_480x640.jpg?w=480&h=640&fit=crop&s=0a878205586092164001a9afe0ef4007'
+  ]
+
   useGSAP(function () {
     gsap.to(imageDivRef.current, {
       scrollTrigger: {
@@ -18,7 +23,10 @@ const Agence = () => {
         start: 'top 26%',
         end: 'top -70%',
         scrub: true,
-        pin: true
+        pin: true,
+        onUpdate: () => {
+          console.log("Hi from Agence")
+        }
       }
     })
   })
