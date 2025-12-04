@@ -25,7 +25,7 @@ const Agence = () => {
         scrub: true,
         pin: true,
         onUpdate: (elem) => {
-          console.log(elem)
+          console.log(elem.progress)
         }
       }
     })
