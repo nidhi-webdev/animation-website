@@ -24,8 +24,8 @@ const Agence = () => {
         end: 'top -70%',
         scrub: true,
         pin: true,
-        onUpdate: () => {
-          console.log("Hi from Agence")
+        onUpdate: (elem) => {
+          console.log(elem)
         }
       }
     })
