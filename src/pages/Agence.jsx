@@ -12,8 +12,11 @@ const Agence = () => {
 
   const imageArray = [
     'https://k72.ca/images/teamMembers/Olivier_480x640.jpg?w=480&h=640&fit=crop&s=c13569c0753117d04f1a93cf7b446d64',
-    'https://k72.ca/images/teamMembers/Lawrence_480x640.jpg?w=480&h=640&fit=crop&s=0a878205586092164001a9afe0ef4007'
+    'https://k72.ca/images/teamMembers/Lawrence_480x640.jpg?w=480&h=640&fit=crop&s=0a878205586092164001a9afe0ef4007',
+    'https://k72.ca/images/teamMembers/HugoJoseph_480x640.jpg?w=480&h=640&fit=crop&s=f152025b8a59b062d1e7978b5d6544c3',
+    'https://k72.ca/images/teamMembers/ChantalG_480x640.jpg?w=480&h=640&fit=crop&s=13093769c4a19cecd291ddcccd898991'
   ]
+
 
   useGSAP(function () {
     gsap.to(imageDivRef.current, {
@@ -25,7 +28,13 @@ const Agence = () => {
         scrub: true,
         pin: true,
         onUpdate: (elem) => {
-          console.log(elem.progress)
+          let imageIndex;
+          if (elem.progress < 1) {
+            imageIndex = Math.floor(elem.progress * imageArray.length)
+          } else {
+            imageIndex = imageArray.length - 1
+          }
+          imageRef.current.src = imageArray[imageIndex]
         }
       }
     })
