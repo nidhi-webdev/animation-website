@@ -20,14 +20,14 @@ const App = () => {
       height: 0,
       ease: "power2.inOut",
       stagger: {
-        amount: -0.3
+        amount: -0.25
       }
     })
 
     tl.to('.stair-item', {
       y: '100%',
       stagger: {
-        amount: -0.3
+        amount: -0.25
       }
     })
   })
