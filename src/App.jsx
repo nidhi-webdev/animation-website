@@ -13,9 +13,9 @@ const App = () => {
 
 
   useGSAP(function () {
-    gsap.from('.stair', {
+    gsap.from('.stair-item', {
       height: 0,
-      duration: 2,
+      ease: "power2.inOut",
       stagger: {
         amount: -0.3
       }
@@ -26,12 +26,12 @@ const App = () => {
 
   return (
     <div className='text-white'>
-      <div className='stair h-screen w-full flex fixed z-20 top-0'>
-        <div className='stair h-full w-1/5 bg-black'> </div>
-        <div className='stair h-full w-1/5 bg-black'> </div>
-        <div className='stair h-full w-1/5 bg-black'> </div>
-        <div className='stair h-full w-1/5 bg-black'> </div>
-        <div className='stair h-full w-1/5 bg-black'> </div>
+      <div className='stair-container h-screen w-full flex fixed z-20 top-0 pointer-events-none'>
+        <div className='stair-item h-full w-1/5 bg-black'> </div>
+        <div className='stair-item h-full w-1/5 bg-black'> </div>
+        <div className='stair-item h-full w-1/5 bg-black'> </div>
+        <div className='stair-item h-full w-1/5 bg-black'> </div>
+        <div className='stair-item h-full w-1/5 bg-black'> </div>
 
       </div>
 
