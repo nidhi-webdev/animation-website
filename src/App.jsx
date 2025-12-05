@@ -10,6 +10,7 @@ import gsap from "gsap"
 
 
 const App = () => {
+  const stairParentRef = useRef(null)
 
 
   useGSAP(function () {
@@ -30,13 +31,16 @@ const App = () => {
         amount: -0.25
       }
     })
+
+    
   })
 
 
 
   return (
     <div className='text-white'>
-      <div className='stair-container h-screen w-full flex fixed z-20 top-0 pointer-events-none'>
+
+      <div ref={stairParentRef} className='stair-container h-screen w-full flex fixed z-20 top-0 pointer-events-none'>
         <div className='stair-item h-full w-1/5 bg-black'> </div>
         <div className='stair-item h-full w-1/5 bg-black'> </div>
         <div className='stair-item h-full w-1/5 bg-black'> </div>
