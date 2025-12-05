@@ -23,6 +23,13 @@ const App = () => {
         amount: -0.3
       }
     })
+
+    tl.to('.stair-item', {
+      y: '100%',
+      stagger: {
+        amount: -0.3
+      }
+    })
   })
 
 
