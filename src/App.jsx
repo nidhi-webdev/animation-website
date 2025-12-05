@@ -6,7 +6,16 @@ import Projects from './pages/Projects'
 
 const App = () => {
   return (
-    <div>
+    <div className='text-white'>
+      <div className='h-screen w-full flex fixed z-20 top-0'>
+        <div className='h-full w-1/5 bg-black'> </div>
+        <div className='h-full w-1/5 bg-white'> </div>
+        <div className='h-full w-1/5 bg-black'> </div>
+        <div className='h-full w-1/5 bg-white'> </div>
+        <div className='h-full w-1/5 bg-black'> </div>
+
+      </div>
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/agence' element={<Agence />} />
