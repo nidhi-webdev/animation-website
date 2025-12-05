@@ -13,7 +13,10 @@ const App = () => {
 
 
   useGSAP(function () {
-    gsap.from('.stair-item', {
+    const tl = gsap.timeline()
+
+
+    tl.from('.stair-item', {
       height: 0,
       ease: "power2.inOut",
       stagger: {
