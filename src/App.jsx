@@ -17,22 +17,22 @@ const App = () => {
   useGSAP(function () {
     const tl = gsap.timeline()
 
+    // Setting initial state - screen starts black
+    tl.set('.stair-item', {
+      height: '100%'
+    })
 
-    tl.from('.stair-item', {
-      height: 0,
+    // Animating the bars sliding down
+    tl.to('.stair-item', {
+      y: '100%',
+      duration: 1,
       ease: "power2.inOut",
       stagger: {
         amount: -0.25
       }
     })
 
-    tl.to('.stair-item', {
-      y: '100%',
-      stagger: {
-        amount: -0.25
-      }
-    })
-
+    // Hiding the container after animation
     tl.to(stairParentRef.current, {
       display: 'none'
     })
