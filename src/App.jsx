@@ -5,6 +5,7 @@ import Agence from './pages/Agence'
 import Projects from './pages/Projects'
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap"
+import { useRef } from 'react'
 
 
 
@@ -32,7 +33,10 @@ const App = () => {
       }
     })
 
-    
+    tl.to(stairParentRef.current, {
+      display: 'none'
+    })
+
   })
 
 
