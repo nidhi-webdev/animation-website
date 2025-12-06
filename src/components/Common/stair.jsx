@@ -1,9 +1,14 @@
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap"
 import { useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 
 
 const Stair = () => {
+
+    // For Location where I want to run this 
+    const locate = useLocation()
+    console.log(locate.pathname)
 
     const stairParentRef = useRef(null)
 
