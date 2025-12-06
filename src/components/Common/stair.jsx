@@ -16,21 +16,21 @@ const Stair = () => {
             height: '100%'
         })
 
+        // Animating the bars sliding down
+        tl.to('.stair-item', {
+            y: '100%',
+            duration: 0.6,
+            ease: "power2.inOut",
+            stagger: {
+                amount: -0.2
+            }
+        })
+
         // Hiding the container after animation
         tl.to(stairParentRef.current, {
             display: 'none'
         })
 
-    })
-
-    // Animating the bars sliding down
-    tl.to('.stair-item', {
-        y: '100%',
-        duration: 0.6,
-        ease: "power2.inOut",
-        stagger: {
-            amount: -0.2
-        }
     })
 
     return (
