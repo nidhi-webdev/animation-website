@@ -25,10 +25,10 @@ const App = () => {
     // Animating the bars sliding down
     tl.to('.stair-item', {
       y: '100%',
-      duration: 1,
+      duration: 0.6,
       ease: "power2.inOut",
       stagger: {
-        amount: -0.25
+        amount: -0.2
       }
     })
 
