@@ -3,7 +3,7 @@ import gsap from "gsap"
 import { useRef } from 'react'
 
 
-const stair = () => {
+const Stair = () => {
 
     const stairParentRef = useRef(null)
 
@@ -45,4 +45,4 @@ const stair = () => {
     )
 }
 
-export default stair
+export default Stair
