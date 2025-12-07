@@ -7,8 +7,8 @@ import { useLocation } from 'react-router-dom'
 const Stair = () => {
 
     // For Location where I want to run this 
-    const locate = useLocation()
-    console.log(locate.pathname)
+    const locate = useLocation().pathname
+    console.log(locate)
 
     const stairParentRef = useRef(null)
 
