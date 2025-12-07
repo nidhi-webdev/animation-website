@@ -58,11 +58,11 @@ const Agence = () => {
         </div>
         <div className='font-[font1] relative'>
           <div className='mt-[55vh]'>
-            <h1 className='text-white text-[20vw] uppercase text-center leading-[18vw]'>Soixan7e <br />
+            <h1 className=' text-[20vw] uppercase text-center leading-[18vw]'>Soixan7e <br />
               Douze</h1>
           </div>
           <div className='pl-[40%] mt-20'>
-            <p className='text-5xl text-white'>
+            <p className='text-5xl '>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notre curiosité nourrit notre créativité.
               On reste humbles et on dit non aux gros egos, même le vôtre. Une marque est vivante.
               Elle a des valeurs, une personnalité, une histoire. Si on oublie ça, on peut faire de
