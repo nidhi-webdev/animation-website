@@ -7,8 +7,8 @@ import { useLocation } from 'react-router-dom'
 const Stair = () => {
 
     // For Location where I want to run this 
-    const locate = useLocation().pathname
-    console.log(locate)
+    const currentPath = useLocation().pathname
+   
 
     const stairParentRef = useRef(null)
 
@@ -16,9 +16,15 @@ const Stair = () => {
     useGSAP(function () {
         const tl = gsap.timeline()
 
-        // Setting initial state - screen starts black
+        // Show the container
+        tl.set(stairParentRef.current, {
+            display: 'flex'
+        })
+
+        // Setting initial state - screen starts black, bars at top
         tl.set('.stair-item', {
-            height: '100%'
+            height: '100%',
+            y: '0%'
         })
 
         // Animating the bars sliding down
@@ -36,7 +42,7 @@ const Stair = () => {
             display: 'none'
         })
 
-    })
+    }, [currentPath])
 
     return (
         <div ref={stairParentRef} className='stair-container h-screen w-full flex fixed z-20 top-0 pointer-events-none'>
