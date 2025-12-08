@@ -6,6 +6,7 @@ const FullScreenNav = () => {
       <div>
         <div>
             <h1> Projects</h1>
+            <div><h2>Pour tout voir </h2> </div>
         </div>
       </div>
     </div>
