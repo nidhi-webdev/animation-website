@@ -1,3 +1,6 @@
+import { useRef } from "react"
+
+
 
 const Navbar = () => {
     const navGreenRef = useRef(null)
@@ -12,7 +15,12 @@ const Navbar = () => {
 
             <div onMouseEnter={() => {
                 navGreenRef.current.style.height = "100%"
-            }} className="h-16 bg-black w-[16vw] relative">
+            }} 
+            onMouseLeave={() => {
+                navGreenRef.current.style.height = "0"
+            }}
+            
+            className="h-16 bg-black w-[16vw] relative cursor-pointer">
 
                 <div ref={navGreenRef}  className="bg-green-500 absolute top-0 h-0 w-full"> </div>
                 <div className="relative"></div>
