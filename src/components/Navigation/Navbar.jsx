@@ -8,13 +8,10 @@ const Navbar = () => {
                 </svg>
             </div>
 
-             <div className="h-16 w-[16vw] relative">
-             <div className="bg-black h-full w-full ">
-               
-            </div>
-            <div className="bg-green-500 absolute top-0 h-0 w-full">
-
-            </div>
+             <div className="h-16 bg-black w-[16vw] relative">
+             
+            <div className="bg-green-500 absolute top-0 h-0 w-full"> </div>
+            <div className="relative"></div>
              </div>
             
         </div>
