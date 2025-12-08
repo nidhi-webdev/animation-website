@@ -1,5 +1,7 @@
 
 const Navbar = () => {
+    const navGreenRef = useRef(null)
+
     return (
         <div className="fixed top-0 w-full flex items-start justify-between z-4">
             <div className="w-40 p-5">
@@ -8,12 +10,14 @@ const Navbar = () => {
                 </svg>
             </div>
 
-             <div className="h-16 bg-black w-[16vw] relative">
-             
-            <div className="bg-green-500 absolute top-0 h-0 w-full"> </div>
-            <div className="relative"></div>
-             </div>
-            
+            <div onMouseEnter={() => {
+                navGreenRef.current.style.height = "100%"
+            }} className="h-16 bg-black w-[16vw] relative">
+
+                <div ref={navGreenRef}  className="bg-green-500 absolute top-0 h-0 w-full"> </div>
+                <div className="relative"></div>
+            </div>
+
         </div>
     )
 }
