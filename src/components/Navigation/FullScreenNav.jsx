@@ -2,7 +2,7 @@ import React from 'react'
 
 const FullScreenNav = () => {
     return (
-        <div id='fullScreenNav' className='text-white h-screen w-full absolute bg-amber-800 py-40'>
+        <div id='fullScreenNav' className='text-white h-screen w-full absolute bg-black py-40'>
             <div id='allLinks'>
                 <div className='link border-t relative ' >
                     <h1 className='font-[font2] text-[8vw] text-center uppercase leading-[0.8] pt-7'> Projects</h1>
@@ -29,7 +29,7 @@ const FullScreenNav = () => {
                     </div>
                 </div>
 
-                 <div className='link border-t relative ' >
+                 <div className='link border-y relative ' >
                     <h1 className='font-[font2] text-[8vw] text-center uppercase leading-[0.8] pt-7'> Projects</h1>
                     <div className='moveLink absolute top-0 bg-[#D3FD50] text-black w-full overflow-hidden'>
                         <div className='flex items-center gap-8'>
@@ -54,7 +54,7 @@ const FullScreenNav = () => {
                     </div>
                 </div>
 
-                 <div className='link border-t relative ' >
+                 <div className='link border-y relative ' >
                     <h1 className='font-[font2] text-[8vw] text-center uppercase leading-[0.8] pt-7'> Projects</h1>
                     <div className='moveLink absolute top-0 bg-[#D3FD50] text-black w-full overflow-hidden'>
                         <div className='flex items-center gap-8'>
@@ -79,7 +79,7 @@ const FullScreenNav = () => {
                     </div>
                 </div>
 
-                 <div className='link border-t relative ' >
+                 <div className='link border-y relative ' >
                     <h1 className='font-[font2] text-[8vw] text-center uppercase leading-[0.8] pt-7'> Projects</h1>
                     <div className='moveLink absolute top-0 bg-[#D3FD50] text-black w-full overflow-hidden'>
                         <div className='flex items-center gap-8'>
