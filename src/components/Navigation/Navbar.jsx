@@ -4,6 +4,8 @@ import { useRef } from "react"
 
 const Navbar = () => {
     const navGreenRef = useRef(null)
+    const line1Ref = useRef(null)
+    const line2Ref = useRef(null)
 
     return (
         <div className="fixed top-0 w-full flex items-start justify-between z-4">
@@ -15,17 +17,22 @@ const Navbar = () => {
 
             <div onMouseEnter={() => {
                 navGreenRef.current.style.height = "100%"
+                line1Ref.current.style.backgroundColor = "black"
+                line2Ref.current.style.backgroundColor = "black"
+                
             }} 
             onMouseLeave={() => {
                 navGreenRef.current.style.height = "0"
+                line1Ref.current.style.backgroundColor = "white"
+                line2Ref.current.style.backgroundColor = "white"
             }}
             
             className="h-13 bg-black w-[16vw] relative cursor-pointer">
 
                 <div ref={navGreenRef}  className="bg-[#D3FD50] transition-all  absolute top-0 h-0 w-full"> </div>
-                <div className="relative flex flex-col gap-1 items-end justify-center h-full px-8">
-                    <div className="w-12 h-0.5 bg-white"></div>
-                    <div className="w-8 h-0.5 bg-white"></div>
+                <div className="relative flex flex-col gap-1 items-end justify-center h-full px-8 hover:bg">
+                    <div ref={line1Ref} className="w-12 h-0.5 bg-white transition-colors duration-200 ease-in-out"></div>
+                    <div ref={line2Ref} className="w-8 h-0.5 bg-white transition-colors duration-200 ease-in-out"></div>
                 </div>
             </div>
 
