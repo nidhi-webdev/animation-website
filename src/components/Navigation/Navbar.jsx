@@ -11,6 +11,8 @@ const Navbar = () => {
 
     const [navOpen, setNavOpen] = useContext(NavBarContext)
 
+    console.log('Navbar - navOpen state:', navOpen)
+
     return (
         <>
             <div className="fixed top-0 w-full flex items-start justify-between z-4">
@@ -21,7 +23,10 @@ const Navbar = () => {
                 </div>
 
                 <div
-                    onClick={() => setNavOpen(v => !v)}
+                    onClick={() => {
+                        console.log('Clicked! Current state:', navOpen)
+                        setNavOpen(v => !v)
+                    }}
                     onMouseEnter={() => {
                         navGreenRef.current.style.height = "100%"
                         line1Ref.current.style.backgroundColor = "black"
@@ -44,6 +49,7 @@ const Navbar = () => {
                 </div>
 
             </div>
+            {navOpen && <FullScreenNav />}
         </>
 
     )
