@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className=''>
       <Navbar />
-      {/* <FullScreenNav /> */}
+      <FullScreenNav />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/agence' element={<Agence />} />

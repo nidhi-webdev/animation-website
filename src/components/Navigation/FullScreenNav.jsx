@@ -1,6 +1,12 @@
 import React from 'react'
+import { useContext } from 'react'
+import { NavBarContext } from '../../context/NavContext'
 
 const FullScreenNav = () => {
+
+    const navContextData = useContext(NavBarContext)
+    console.log(navContextData)
+
     return (
         <div id='fullScreenNav' className='text-white h-screen w-full absolute bg-black  overflow-hidden'>
             <div className='flex w-full justify-between items-start'>
