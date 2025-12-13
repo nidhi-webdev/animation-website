@@ -4,8 +4,8 @@ import { NavBarContext } from '../../context/NavContext'
 
 const FullScreenNav = () => {
 
-    const navContextData = useContext(NavBarContext)
-    console.log(navContextData)
+    const [navOpen, setNavOpen] = useContext(NavBarContext)
+    console.log(navOpen)
 
     return (
         <div id='fullScreenNav' className='text-white h-screen w-full absolute bg-black  overflow-hidden'>

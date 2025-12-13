@@ -1,4 +1,5 @@
-import { useRef } from "react"
+import { useContext, useRef } from "react"
+import { NavBarContext } from '../../context/NavContext'
 
 
 
@@ -6,6 +7,8 @@ const Navbar = () => {
     const navGreenRef = useRef(null)
     const line1Ref = useRef(null)
     const line2Ref = useRef(null)
+
+    const [navOpen, setNavOpen] = useContext(NavBarContext)
 
     return (
         <div className="fixed top-0 w-full flex items-start justify-between z-4">
