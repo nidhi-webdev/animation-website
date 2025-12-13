@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { createContext } from 'react'
 
 const NavContext = ({children}) => {
+const NavContext = createContext()
+const [navOpen, setNavOpen] = useState(false)
+
   return (
     <div>
-      {children}
+        <NavContext.Provider value={[navOpen, setNavOpen]}>
+            {children}
+        </NavContext.Provider>
+      
     </div>
   )
 }
