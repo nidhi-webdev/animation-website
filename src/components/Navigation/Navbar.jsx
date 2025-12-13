@@ -18,7 +18,9 @@ const Navbar = () => {
                 </svg>
             </div>
 
-            <div onMouseEnter={() => {
+            <div 
+            onClick={() => setNavOpen(v => !v)}
+            onMouseEnter={() => {
                 navGreenRef.current.style.height = "100%"
                 line1Ref.current.style.backgroundColor = "black"
                 line2Ref.current.style.backgroundColor = "black"
