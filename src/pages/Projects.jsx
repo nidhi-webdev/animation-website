@@ -17,7 +17,7 @@ const Projects = () => {
             <img className='h-full w-full object-cover ' src='https://k72.ca/images/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290.jpg?w=640&h=290&s=ac50a70feaaa2601b3aacad544c6045b' alt='Image' />
 
             <div className='absolute top-0 left-0 h-full w-full bg-black/10 flex items-center justify-center'>
-              <h2 className='uppercase text-4xl font-[font2] border-2 rounded-full pt-2 px-4 text-white border-white'> Voir le projet </h2>
+              <h2 className='uppercase text-6xl font-[font2] border-2 rounded-full pt-4 pl-4 pr-4  text-white border-white'> Voir le projet </h2>
             </div>
           </div>
         </div>
