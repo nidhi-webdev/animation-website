@@ -54,7 +54,7 @@ const Projects = () => {
 
       <div className='-mt-10'>
         {projects.map(function (elem) {
-          return <ProjectCard  image1 = {elem.Image1}  />
+          return <ProjectCard image1 = {elem.Image1}  />
         })}
 
 
