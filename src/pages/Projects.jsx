@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       Image1: 'https://k72.ca/images/caseStudies/OKA/OKA_thumbnail.jpg?w=1280&h=960&s=c12c27c9db3c521e4c82a246a8d5c022',
-      Image2: 'https://k72.ca/images/caseStudies/Opto_Reseau_Brand/opto_thumbnail2.jpg?w=1280&h=960&s=7f23d7d824eb04c784dcf51380fe3996'
+      Image2: 'https://k72.ca/images/caseStudies/Opto/thumbnailimage_opto.jpg?w=1280&h=960&s=938f0bfb3de1ff2a2846b884eec2d757',
 
     },
     {
@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       Image1: 'https://k72.ca/images/caseStudies/CRISIS24/crisis24_behance_1920X1200_cartes.jpg?w=1280&h=960&s=bb42c9de87442e1bffc542c332e07124',
-      Image2: 'https://k72.ca/images/caseStudies/Opto/thumbnailimage_opto.jpg?w=1280&h=960&s=938f0bfb3de1ff2a2846b884eec2d757',
+      Image2: 'https://k72.ca/images/caseStudies/Opto_Reseau_Brand/opto_thumbnail2.jpg?w=1280&h=960&s=7f23d7d824eb04c784dcf51380fe3996'
 
     },
     {
@@ -54,7 +54,7 @@ const Projects = () => {
 
       <div className='-mt-10'>
         {projects.map(function (elem) {
-          return <ProjectCard image1 = {elem.Image1}  />
+          return <ProjectCard image1 = {elem.Image1} image2 = {elem.Image2} />
         })}
 
 
