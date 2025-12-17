@@ -29,9 +29,9 @@ const Projects = () => {
 
 
       <div className='-mt-10'>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects.map(function(){
+          return <ProjectCard />
+        })}
 
 
 
