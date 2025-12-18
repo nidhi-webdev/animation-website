@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react"
 import ProjectCard from "../components/Projects/ProjectCard"
 
 const Projects = () => {
@@ -41,6 +42,16 @@ const Projects = () => {
 
 
   ]
+  
+
+  useGSAP(function() {
+    gsap.from('.hero', {
+      height: 0,
+      scrollTrigger: {
+
+      }
+    })
+  })
 
   return (
     <div className='p-4'>
@@ -54,7 +65,7 @@ const Projects = () => {
 
       <div className='-mt-10'>
         {projects.map(function (elem, idx) {
-          return <div key={idx} className='w-full h-[800px] flex gap-4 mb-4 cursor-pointer'>
+          return <div key={idx} className='hero w-full h-[800px] flex gap-4 mb-4 cursor-pointer'>
             <ProjectCard image1={elem.Image1} image2={elem.Image2} />
           </div>
 
