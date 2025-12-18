@@ -3,7 +3,6 @@
 
 
 const ProjectCard = (props ) => {
-    console.log("From Project card", props  )
 
 
     return (
