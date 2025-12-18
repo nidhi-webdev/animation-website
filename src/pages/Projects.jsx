@@ -53,7 +53,7 @@ const Projects = () => {
 
 
       <div className='-mt-10'>
-        {projects.map(function (elem) {
+        {projects.map(function (elem, idx) {
           return <div key={idx} className='w-full h-[800px] flex gap-4 mb-4 cursor-pointer'>
             <ProjectCard image1={elem.Image1} image2={elem.Image2} />
           </div>
