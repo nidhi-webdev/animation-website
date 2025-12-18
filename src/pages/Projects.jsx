@@ -48,7 +48,11 @@ const Projects = () => {
     gsap.from('.hero', {
       height: 0,
       ScrollTrigger: {
-        trigger: 'Projectcard'
+        trigger: 'Projectcard',
+        marker: true,
+        start: 'top 100%',
+        end: 'top 150%',
+        scrub: true
 
       }
     })
