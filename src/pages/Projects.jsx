@@ -44,16 +44,18 @@ const Projects = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useGSAP(function() {
+  useGSAP(function () {
     gsap.from('.hero', {
-      height: 0,
-      ScrollTrigger: {
-        trigger: 'Projectcard',
-        marker: true,
-        start: 'top 100%',
-        end: 'top 150%',
+      height: '100px',
+      stagger: {
+        amount: 0.4
+      },
+      scrollTrigger: {
+        trigger: '.Projectcard',
+        markers: true,
+        start: 'top 80%',
+        end: 'top 30%',
         scrub: true
-
       }
     })
   })
@@ -70,7 +72,7 @@ const Projects = () => {
 
       <div className='-mt-10 Projectcard'>
         {projects.map(function (elem, idx) {
-          return <div key={idx} className='hero w-full h-[800px] flex gap-4 mb-4 cursor-pointer'>
+          return <div key={idx} className='hero w-full h-[300px] flex gap-4 mb-4 cursor-pointer'>
             <ProjectCard image1={elem.Image1} image2={elem.Image2} />
           </div>
 
