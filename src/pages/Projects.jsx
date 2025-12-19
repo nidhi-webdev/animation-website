@@ -45,18 +45,27 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
-    gsap.from('.hero', {
-      height: '50px',
-      stagger: {
-        amount: 0
-      },
-      scrollTrigger: {
-        trigger: '.lol',
-        markers: true,
-        start: 'top 100%',
-        end: 'top -150%',
-        scrub: true
-      }
+    // First, set all heroes to collapsed state
+    gsap.set('.hero', { height: '0px', overflow: 'hidden' })
+    
+    // Then animate each one individually
+    const heroes = document.querySelectorAll('.hero')
+    
+    heroes.forEach((hero, index) => {
+      gsap.to(hero, {
+        height: '800px',
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: hero,
+          start: 'top 85%',
+          end: 'top 25%',
+          scrub: 2,
+          markers: true,
+          onUpdate: (self) => {
+            console.log(`Hero ${index} progress:`, self.progress)
+          }
+        }
+      })
     })
   })
 
