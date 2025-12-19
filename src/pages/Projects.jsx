@@ -45,8 +45,8 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
-    // First, set all heroes to collapsed state
-    gsap.set('.hero', { height: '0px', overflow: 'hidden' })
+    // First, set all heroes to shrunk state (200px preview height)
+    gsap.set('.hero', { height: '200px', overflow: 'hidden' })
     
     // Then animate each one individually
     const heroes = document.querySelectorAll('.hero')
