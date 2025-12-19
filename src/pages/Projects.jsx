@@ -47,7 +47,7 @@ const Projects = () => {
   useGSAP(function () {
     // Set initial state - all heroes start at 200px height
     gsap.set('.hero', {
-      height: '10px',
+      height: '200px',
       overflow: 'hidden'
     })
 
@@ -58,10 +58,11 @@ const Projects = () => {
         ease: 'power2.inOut',
         scrollTrigger: {
           trigger: hero,
-          start: 'top 85%',
-          end: 'top 30%',
+          start: 'top bottom', // Start when top of card hits bottom of viewport
+          end: 'top top', // End when top of card hits top of viewport
           scrub: 1.5,
-          markers: true
+          markers: true,
+          invalidateOnRefresh: true
         }
       })
     })
