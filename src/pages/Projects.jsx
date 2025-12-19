@@ -42,59 +42,96 @@ const Projects = () => {
     }
   ]
 
+  // Register GSAP plugins
   gsap.registerPlugin(ScrollTrigger)
 
-  useGSAP(function () {
-    // First, set all heroes to shrunk state (200px preview height)
-    gsap.set('.hero', { height: '200px', overflow: 'hidden' })
+  useGSAP(() => {
+    // Animate the title on load
+    gsap.from('.project-title', {
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'power3.out',
+      delay: 0.3
+    })
+
+    // Get all project cards
+    const heroes = gsap.utils.toArray('.hero')
     
-    // Then animate each one individually
-    const heroes = document.querySelectorAll('.hero')
-    
+    // Set initial state for all cards
+    gsap.set(heroes, {
+      height: '200px',
+      opacity: 0.7
+    })
+
+    // Animate each card individually with scroll trigger
     heroes.forEach((hero, index) => {
-      gsap.to(hero, {
-        height: '800px',
-        ease: 'power2.out',
+      // Create timeline for each card
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: hero,
-          start: 'top 85%',
-          end: 'top 25%',
-          scrub: 2,
-          markers: true,
-          onUpdate: (self) => {
-            console.log(`Hero ${index} progress:`, self.progress)
-          }
+          start: 'top 90%',
+          end: 'top 20%',
+          scrub: 1.5,
+          // markers: true, // Remove this in production
         }
       })
+
+      // Expand height and fade in
+      tl.to(hero, {
+        height: '800px',
+        opacity: 1,
+        ease: 'power2.inOut'
+      })
+
+      // Animate images inside with parallax effect
+      const images = hero.querySelectorAll('img')
+      images.forEach((img, imgIndex) => {
+        gsap.fromTo(img,
+          {
+            scale: 1.2,
+            y: 50
+          },
+          {
+            scale: 1,
+            y: 0,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: hero,
+              start: 'top 80%',
+              end: 'top 30%',
+              scrub: 2,
+            }
+          }
+        )
+      })
     })
-  })
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
+  }, [])
 
   return (
     <div className='p-4'>
       <div className='pt-[45vh]'>
-        <h2 className='font-[font2] text-[10vw] uppercase'>
+        <h2 className='project-title font-[font2] text-[10vw] uppercase'>
           Projets
         </h2>
       </div>
 
-
-
-      <div className='-mt-10 Projectcard lol'>
-        {projects.map(function (elem, idx) {
-          return <div key={idx} className='hero w-full h-[800px] flex gap-4 mb-4 cursor-pointer overflow-hidden'>
+      <div className='-mt-10 Projectcard'>
+        {projects.map((elem, idx) => (
+          <div 
+            key={idx} 
+            className='hero w-full flex gap-4 mb-4 cursor-pointer overflow-hidden'
+            style={{ height: '200px' }}
+          >
             <ProjectCard image1={elem.Image1} image2={elem.Image2} />
           </div>
-
-        })}
-
-
-
-
+        ))}
       </div>
-
-
-
-
     </div>
   )
 }
