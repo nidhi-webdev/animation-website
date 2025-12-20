@@ -52,6 +52,9 @@ const Projects = () => {
     // Set initial state - all rows start collapsed
     gsap.set(heroes, { height: '20px' })
     
+    // Refresh ScrollTrigger after setting initial state
+    ScrollTrigger.refresh()
+    
     heroes.forEach((hero) => {
       gsap.to(hero, {
         height: '500px',
@@ -59,7 +62,8 @@ const Projects = () => {
           trigger: hero,
           start: 'top 90%',
           end: 'top -20%',
-          scrub: 1
+          scrub: 1,
+          invalidateOnRefresh: true
         }
       })
     })
