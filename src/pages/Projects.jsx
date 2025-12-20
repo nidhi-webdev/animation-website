@@ -45,46 +45,46 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
-    // Set initial state - all heroes start at 200px height
-    gsap.set('.hero', {
-      height: '200px',
-      overflow: 'hidden'
-    })
-
-    // Animate each hero individually as it enters viewport
-    gsap.utils.toArray('.hero').forEach((hero, index) => {
-      gsap.to(hero, {
-        height: '800px',
-        ease: 'power2.inOut',
-        scrollTrigger: {
-          trigger: hero,
-          start: 'top bottom', // Start when top of card hits bottom of viewport
-          end: 'top top', // End when top of card hits top of viewport
-          scrub: 1.5,
-          markers: true,
-          invalidateOnRefresh: true
-        }
-      })
+    gsap.from('.hero', {
+      height: '50px',
+      stagger: {
+        amount: 0
+      },
+      scrollTrigger: {
+        trigger: '.lol',
+        markers: true,
+        start: 'top 100%',
+        end: 'top -150%',
+        scrub: true
+      }
     })
   })
 
   return (
-    <div className='p-4 mb-[100vh]'>
+    <div className='p-4'>
       <div className='pt-[45vh]'>
         <h2 className='font-[font2] text-[10vw] uppercase'>
           Projets
         </h2>
       </div>
 
-      <div className='-mt-20 lol'>
+
+
+      <div className='-mt-10 Projectcard lol'>
         {projects.map(function (elem, idx) {
-          return <div key={idx} className='hero w-full flex gap-4 cursor-pointer mb-4 overflow-hidden'>
+          return <div key={idx} className='hero w-full h-[800px] flex gap-4 mb-4 cursor-pointer overflow-hidden'>
             <ProjectCard image1={elem.Image1} image2={elem.Image2} />
           </div>
 
         })}
 
+
+
+
       </div>
+
+
+
 
     </div>
   )
