@@ -49,9 +49,12 @@ const Projects = () => {
   useGSAP(function () {
     const heroes = document.querySelectorAll('.hero')
     
+    // Set initial state - all rows start collapsed
+    gsap.set(heroes, { height: '20px' })
+    
     heroes.forEach((hero) => {
-      gsap.from(hero, {
-        height: '20px',
+      gsap.to(hero, {
+        height: '500px',
         scrollTrigger: {
           trigger: hero,
           start: 'top 90%',
