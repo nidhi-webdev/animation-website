@@ -51,7 +51,7 @@ const Projects = () => {
     
     heroes.forEach((hero) => {
       gsap.from(hero, {
-        height: '40px',
+        height: '20px',
         scrollTrigger: {
           trigger: hero,
           start: 'top 90%',
