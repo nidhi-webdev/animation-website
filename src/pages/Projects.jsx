@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/all'
 const Projects = () => {
 
   const projects = [
-     {
+    {
       image1: 'https://k72.ca/images/caseStudies/OKA/OKA_thumbnail.jpg?w=1280&h=960&s=c12c27c9db3c521e4c82a246a8d5c022',
       image2: 'https://k72.ca/images/caseStudies/Opto/thumbnailimage_opto.jpg?w=1280&h=960&s=938f0bfb3de1ff2a2846b884eec2d757',
 
@@ -41,23 +41,26 @@ const Projects = () => {
       image1: 'https://k72.ca/images/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290.jpg?w=640&h=290&s=ac50a70feaaa2601b3aacad544c6045b',
       image2: 'https://k72.ca/images/caseStudies/PME-MTL/PME-MTL_Thumbnail.jpg?w=1280&h=960&s=49e3b251d0a28f1f8d40fd59517fc000'
     }
-]
+  ]
 
 
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
     const heroes = document.querySelectorAll('.hero')
-    
+
     // Set initial state - all rows start collapsed
     gsap.set(heroes, { height: '20px' })
-    
+
     // Refresh ScrollTrigger after setting initial state
     ScrollTrigger.refresh()
-    
+
     heroes.forEach((hero) => {
       gsap.to(hero, {
         height: '500px',
+        stagger: {
+          amount: 0
+        },
         scrollTrigger: {
           trigger: hero,
           start: 'top 90%',
