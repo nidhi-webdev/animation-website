@@ -13,7 +13,7 @@ const Home = () => {
                 <HomeTopText />
                 <HomeBottomText />
             </div>
-           
+
         </div>
     )
 }

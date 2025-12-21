@@ -15,10 +15,11 @@ body {
 }
 
 @keyframes moveAnimation {
-  from{
+  from {
     transform: translateX(0);
   }
-  to{
+
+  to {
     transform: translateX(-100%);
   }
 }
@@ -34,6 +35,7 @@ body {
   opacity: 0;
   transition: all ease 0.3s;
 }
+
 .link:hover .moveLink {
   opacity: 1;
 }
