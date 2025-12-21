@@ -8,7 +8,7 @@ const Stair = () => {
 
     // For Location where I want to run this 
     const currentPath = useLocation().pathname
-   
+
 
     const stairParentRef = useRef(null)
 
