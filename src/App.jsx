@@ -13,7 +13,7 @@ const App = () => {
   
 
   return (
-    <div className=''>
+    <div className='overflow-x-hidden'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
